@@ -1,0 +1,25 @@
+<f:layout name="Backend/Default" />
+
+<f:section name="iconButtons">
+    <!---->
+</f:section>
+
+<f:section name="headline">
+    [codeFareith] Backend Skin
+    <small>v1.0.3</small>
+</f:section>
+
+<f:section name="content">
+    <f:flashMessages />
+
+    <f:form action="save">
+        <div class="form-group">
+            <label for="file_content">{f:translate(key: 'file_content')}</label>
+            <pre id="file_content" class="ace-editor" style="height: 500px;">{fileContent}</pre>
+        </div>
+
+        <div class="btn-group">
+            <button id="save_content" class="btn btn-primary" name="save">{f:translate(key: 'save')}</button>
+        </div>
+    </f:form>
+</f:section>

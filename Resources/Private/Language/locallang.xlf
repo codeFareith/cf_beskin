@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-12-20T12:00:00Z" product-name="cf_beskin">
+        <header/>
+        <body>
+            <trans-unit id="file_content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="save">
+                <source>Save</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
