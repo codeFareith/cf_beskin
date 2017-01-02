@@ -9,7 +9,7 @@ For administrators
 This chapter describes how to manage the extension from a superuser point of view.
 
 
-.. _installation
+.. _installation:
 
 Installation
 ------------
@@ -27,7 +27,7 @@ The extension needs to be installed as any other extension of TYPO3 CMS:
 #. Change the extension configuration to your needs
 
 
-.. _usage
+.. _usage:
 
 How to use
 ----------

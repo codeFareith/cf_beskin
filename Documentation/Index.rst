@@ -50,8 +50,3 @@
 
         Introduction/Index
         Administrator/Index
-        .. Developer/Index
-        .. KnownProblems/Index
-        .. ToDoList/Index
-        .. ChangeLog/Index
-        .. Links

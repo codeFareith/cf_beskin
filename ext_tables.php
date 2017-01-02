@@ -4,7 +4,7 @@ if(!defined('TYPO3_MODE'))
     die('Access denied.');
 
 if(TYPO3_MODE === 'BE') {
-    $GLOBALS['TBE_STYLES']['skins']['backend']['stylesheetDirectories']['cf_beskin'] = 'EXT:cf_beskin/Resources/Public/Css/';
+    $GLOBALS['TBE_STYLES']['skins']['backend']['stylesheetDirectories']['cf_beskin'] = 'EXT:' . $_EXTKEY . '/Resources/Public/Css/';
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
         'CodeFareith.' . $_EXTKEY,
