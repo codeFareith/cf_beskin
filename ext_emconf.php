@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => '[codeFareith] Backend Skin',
-    'description' => '',
+    'description' => 'Define your own css rule-sets for the TYPO3 CMS backend.',
     'category' => 'be',
 
     'author' => 'Robin "codeFareith" von den Bergen',
