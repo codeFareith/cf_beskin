@@ -9,6 +9,9 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class StylesheetController extends ActionController {
     /** @var string */
+    protected $extPath;
+
+    /** @var string */
     protected $targetFile;
 
     /**
@@ -16,15 +19,15 @@ class StylesheetController extends ActionController {
      */
     public function initializeAction() {
         $extKey = GeneralUtility::camelCaseToLowerCaseUnderscored($this->extensionName);
-        $this->targetFile = (ExtensionManagementUtility::extPath($extKey) . 'Resources/Public/Css/backend.css');
+        $this->extPath = ExtensionManagementUtility::extPath($extKey);
+        $this->targetFile = ($this->extPath . 'Resources/Public/Css/backend.css');
     }
 
     /**
      * action show
      */
     public function showAction() {
-        //$content = GeneralUtility::getURL($this->targetFile);
-        //$this->view->assign('fileContent', $content);
+        $this->view->assign('aceBasePath', ($this->extPath . 'Resources/Public/JavaScript/Ace'));
     }
 
     /**
