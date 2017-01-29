@@ -1,13 +1,5 @@
 <f:layout name="Backend/Default" />
 
-<!-- [ SECTION: iconButtons ] ---------------------------------------------- -->
-<f:section name="iconButtons">
-
-</f:section>
-<!-- ----------------------------------------------------------------------- -->
-
-
-
 <!-- [ SECTION: headline ] ------------------------------------------------- -->
 <f:section name="headline">
     <h1>
@@ -26,7 +18,7 @@
     <f:form action="save">
         <div class="form-group">
             <label for="editor">{f:translate(key: 'file_content')}</label>
-            <pre id="editor" class="ace-editor" style="height: 500px;"></pre>
+            <pre id="editor" class="ace-editor" style="height: 500px;">{fileContent}</pre>
         </div>
 
         <div class="btn-group">
@@ -87,12 +79,12 @@
                     evt.preventDefault();
 
                 TYPO3.jQuery.ajax(
-                        TYPO3.settings.ajaxUrls['cf_beskin::saveStylesheet'],
-                        {
-                            data: {
-                                content: editor.getValue()
-                            }
+                    TYPO3.settings.ajaxUrls['cf_beskin::saveStylesheet'],
+                    {
+                        data: {
+                            content: editor.getValue()
                         }
+                    }
                 ).done(
                     function(result) {
                         top.TYPO3.Notification.success(

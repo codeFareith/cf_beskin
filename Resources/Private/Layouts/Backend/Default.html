@@ -1,31 +1,17 @@
-<f:be.container>
-    <f:be.pageRenderer includeCssFiles="{
+<f:be.pageRenderer
+    loadJQuery="true"
+    jQueryNamespace="none"
+    includeRequireJsModules="{
+        0:'TYPO3/CMS/Backend/ClickMenu'
+    }"
+    includeJsFiles="{
+        0:'{aceBasePath}/ace.js'
+    }"
+    includeCssFiles="{
 
-        }" includeJsFiles="{
-            1: '{aceBasePath}/ace.js'
-        }" loadJQuery="1"
-    />
+    }"
+/>
 
-    <div class="typo3-fullDoc">
-        <div id="typo3-docheader">
-            <div class="typo3-docheader-functions">
-                <div class="left"></div>
-                <div class="right"></div>
-            </div>
-
-            <div class="typo3-docheader-buttons">
-                <div class="left"></div>
-                <div class="right"></div>
-            </div>
-        </div>
-
-        <div id="typo3-docbody">
-            <div id="typo3-inner-docbody">
-                <f:render section="headline" />
-                <f:render section="content" />
-            </div>
-        </div>
-    </div>
-
-    <f:render section="script" />
-</f:be.container>
+<f:render section="headline" />
+<f:render section="content" />
+<f:render section="script" />
