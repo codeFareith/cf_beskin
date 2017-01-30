@@ -9,6 +9,26 @@
             <trans-unit id="save">
                 <source>Save</source>
             </trans-unit>
+
+            <trans-unit id="notification.load.error.title">
+                <source>Oooops!</source>
+            </trans-unit>
+            <trans-unit id="notification.load.error.body">
+                <source>There was an error when trying to load the stylesheet. Please check the JavaScript console for further information.</source>
+            </trans-unit>
+
+            <trans-unit id="notification.save.success.title">
+                <source>Done.</source>
+            </trans-unit>
+            <trans-unit id="notification.save.success.body">
+                <source>Your changes have been saved successfully. You may have to refresh this page for the changes to take effect.</source>
+            </trans-unit>
+            <trans-unit id="notification.save.error.title">
+                <source>Oh no!</source>
+            </trans-unit>
+            <trans-unit id="notification.save.error.body">
+                <source>There was an error when trying to save the stylesheet. Please check the JavaScript console for further information.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
