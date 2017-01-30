@@ -1,0 +1,38 @@
+{namespace cf=CodeFareith\CfBeskin\ViewHelpers}
+
+<f:layout name="Backend/Default" />
+
+<!-- [ SECTION: headline ] ------------------------------------------------- -->
+<f:section name="headline">
+    <h1>
+        <span>[codeFareith] Backend Skin</span>
+        <small>v1.0.5</small>
+    </h1>
+</f:section>
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- [ SECTION: content ] -------------------------------------------------- -->
+<f:section name="content">
+    <f:flashMessages />
+
+    <f:form action="save">
+        <div class="form-group">
+            <label for="editor">{f:translate(key: 'file_content')}</label>
+
+            <cf:aceEditor
+                handler="TYPO3/CMS/CfBeskin/StylesheetEditorHandler"
+                theme="chaos"
+                mode="css"
+                id="editor"
+                style="height: 400px;"
+            />
+        </div>
+
+        <div class="btn-group">
+            <button id="save" class="btn btn-primary" name="save">{f:translate(key: 'save')}</button>
+        </div>
+    </f:form>
+</f:section>
+<!-- ----------------------------------------------------------------------- -->

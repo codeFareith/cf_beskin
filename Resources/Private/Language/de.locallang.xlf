@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-12-20T12:00:00Z" product-name="cf_beskin">
+        <header/>
+        <body>
+            <trans-unit id="file_content">
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="save">
+                <target>Speichern</target>
+            </trans-unit>
+
+            <trans-unit id="notification.load.error.title">
+                <target>Uuuups!</target>
+            </trans-unit>
+            <trans-unit id="notification.load.error.body">
+                <target>Beim Laden des Stylesheets ist ein Fehler aufgetreten. Prüfen Sie die JavaScript-Konsole für weitere Informationen.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.save.success.title">
+                <target>Erledigt.</target>
+            </trans-unit>
+            <trans-unit id="notification.save.success.body">
+                <target>Das Stylesheet wurde erfolgreich gespeichert. Möglicherweise müssen Sie die Seite neu laden, damit die Änderungen in Kraft treten.</target>
+            </trans-unit>
+            <trans-unit id="notification.save.error.title">
+                <target>Oh nein!</target>
+            </trans-unit>
+            <trans-unit id="notification.save.error.body">
+                <target>Beim Speichern des Stylesheets ist ein Fehler aufgetreten. Prüfen Sie die JavaScript-Konsole für weitere Informationen.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

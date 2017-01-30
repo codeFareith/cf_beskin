@@ -1,2 +1,6 @@
 @charset "UTF-8";
 
+/* pagespeed_module bugfix */
+script {
+    display: none !important;
+}

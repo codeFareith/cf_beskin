@@ -1,0 +1,12 @@
+{
+  "name": "codefareith/cf_beskin",
+  "description": "Define your own css rule-sets for the TYPO3 CMS backend.",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Robin von den Bergen",
+      "email": "rvdb@fareith.de"
+    }
+  ]
+}

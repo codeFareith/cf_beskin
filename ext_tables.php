@@ -12,7 +12,7 @@ if(TYPO3_MODE === 'BE') {
         'tx_cfbeskin',
         '',
         [
-            'Stylesheet' => 'show'
+            'Editor' => 'render'
         ],
         [
             'access' => 'admin',
@@ -22,12 +22,17 @@ if(TYPO3_MODE === 'BE') {
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerAjaxHandler(
-        'cf_beskin::loadStylesheet',
-        'CodeFareith\\CfBeskin\\Controller\\StylesheetController->ajaxLoad'
+        $_EXTKEY . '::loadStylesheet',
+        'CodeFareith\\CfBeskin\\Controller\\EditorController->ajaxLoadFile'
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerAjaxHandler(
-        'cf_beskin::saveStylesheet',
-        'CodeFareith\\CfBeskin\\Controller\\StylesheetController->ajaxSave'
+        $_EXTKEY . '::saveStylesheet',
+        'CodeFareith\\CfBeskin\\Controller\\EditorController->ajaxSaveFile'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerAjaxHandler(
+        $_EXTKEY . '::ajaxTranslate',
+        'CodeFareith\\CfBeskin\\Utility\\AjaxLocalizationUtility->ajaxTranslate'
     );
 }
