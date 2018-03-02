@@ -10,7 +10,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => '',
 
     'state' => 'stable',
-    'version' => '1.0.5',
+    'version' => '1.1.0',
 
     'uploadFolders' => false,
     'createDirs' => '',

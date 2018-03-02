@@ -9,21 +9,23 @@
  */
 namespace CodeFareith\CfBeskin\Utility;
 
-use TYPO3\CMS\Core\Http\AjaxRequestHandler;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 class AjaxLocalizationUtility {
     /**
-     * @param array $params
-     * @param AjaxRequestHandler|null $ajaxObj
-     * @return void
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @return ResponseInterface
+     * @throws \RuntimeException
      */
-    public static function ajaxTranslate($params = array(), AjaxRequestHandler &$ajaxObj = null) {
-        $key = $params['request']->getQueryParams()['key'];
-        $extensionName = $params['request']->getQueryParams()['extensionName'];
+    public static function ajaxTranslate(ServerRequestInterface $request, ResponseInterface $response) {
+        $key = $request->getQueryParams()['key'];
+        $extensionName = $request->getQueryParams()['extensionName'];
         $result = LocalizationUtility::translate($key, $extensionName);
 
-        $ajaxObj->setContentFormat('json');
-        $ajaxObj->addContent('result', $result);
+        $response->getBody()->write(json_encode(['result' => $result]));
+        return $response;
     }
 }

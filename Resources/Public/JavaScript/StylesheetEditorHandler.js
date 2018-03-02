@@ -73,7 +73,7 @@ define(
                 var self = this;
 
                 $.ajax({
-                    url: TYPO3.settings.ajaxUrls['cf_beskin::loadStylesheet'],
+                    url: TYPO3.settings.ajaxUrls['system_CfBeskin_loadStylesheets'],
                     data: {
                         file: 'backend.css'
                     },
@@ -106,7 +106,7 @@ define(
                 var self = this;
 
                 $.ajax({
-                    url: TYPO3.settings.ajaxUrls['cf_beskin::saveStylesheet'],
+                    url: TYPO3.settings.ajaxUrls['system_CfBeskin_saveStylesheets'],
                     data: {
                         file: 'backend.css',
                         content: this.elements.editor.getValue()
@@ -148,7 +148,7 @@ define(
              */
             translate: function(key) {
                 return $.ajax({
-                    url: TYPO3.settings.ajaxUrls['cf_beskin::ajaxTranslate'],
+                    url: TYPO3.settings.ajaxUrls['utility_CfBeskin_doTranslate'],
                     data: {
                         key: key,
                         extensionName: 'cf_beskin'

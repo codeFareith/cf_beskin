@@ -9,6 +9,8 @@
  */
 namespace CodeFareith\CfBeskin\Controller;
 
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Backend\View\BackendTemplateView;
 use TYPO3\CMS\Core\Http\AjaxRequestHandler;
 use TYPO3\CMS\Core\Page\PageRenderer;
@@ -65,31 +67,34 @@ class EditorController extends ActionController {
     public function renderAction() {}
 
     /**
-     * @param array $params
-     * @param AjaxRequestHandler|null $ajaxObj
-     * @return void
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @return ResponseInterface
+     * @throws \RuntimeException
+     * @throws \InvalidArgumentException
      */
-    public function ajaxLoadFile($params = array(), AjaxRequestHandler &$ajaxObj = null) {
+    public function ajaxLoadFile(ServerRequestInterface $request, ResponseInterface $response) {
         $this->initializeAction();
-        $file = ($this->extPath . 'Resources/Public/Css/' . $params['request']->getQueryParams()['file']);
-        $content = GeneralUtility::getURL($file);
-
-        $ajaxObj->setContentFormat('plain');
-        $ajaxObj->addContent('fileContent', $content);
+        $file = ($this->extPath . 'Resources/Public/Css/' . $request->getQueryParams()['file']);
+        $content = GeneralUtility::getUrl($file);
+        $response->withHeader('Content-Type', 'text/plain');
+        $response->getBody()->write($content);
+        return $response->withHeader('Content-Type', 'text/plain');
     }
 
     /**
-     * @param array $params
-     * @param AjaxRequestHandler|null $ajaxObj
-     * @return void
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @return ResponseInterface
+     * @throws \RuntimeException
      */
-    public function ajaxSaveFile($params = array(), AjaxRequestHandler &$ajaxObj = null) {
+    public function ajaxSaveFile(ServerRequestInterface $request, ResponseInterface $response) {
         $this->initializeAction();
-        $file = ($this->extPath . 'Resources/Public/Css/' . $params['request']->getQueryParams()['file']);
-        $content = $params['request']->getQueryParams()['content'];
+        $file = ($this->extPath . 'Resources/Public/Css/' . $request->getQueryParams()['file']);
+        $content = $request->getQueryParams()['content'];
         $result = GeneralUtility::writeFile($file, $content);
 
-        $ajaxObj->setContentFormat('json');
-        $ajaxObj->addContent('result', $result);
+        $response->getBody()->write(json_encode(['result' => $result]));
+        return $response;
     }
 }
