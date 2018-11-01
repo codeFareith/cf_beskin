@@ -1,0 +1,6 @@
+.idea/
+.Build/
+composer.phar
+composer.lock
+.DS_Store
+Tests/Reports/

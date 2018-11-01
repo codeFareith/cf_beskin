@@ -45,15 +45,17 @@ class AceEditorViewHelper extends AbstractTagBasedViewHelper {
     public function initializeArguments() {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
+
+        $this->registerArgument('handler', 'integer', 'enthaelt die UID des CE', TRUE);
+        $this->registerArgument('theme', 'string', 'enthaelt das Tabellenelement aus sys_category', TRUE);
+        $this->registerArgument('mode', 'string', 'enthaelt den Tabellennamen aus sys_category_record_mm', TRUE);
     }
 
-    /**
-     * @param string $handler
-     * @param string $theme
-     * @param string $mode
-     * @return string
-     */
-    public function render($handler, $theme = '', $mode = '') {
+    public function render() {
+        $handler  = $this->arguments['handler'];
+        $theme    = $this->arguments['theme'];
+        $mode     = $this->arguments['mode'];
+
         $this->tag->addAttribute('data-theme', $theme);
         $this->tag->addAttribute('data-mode', $mode);
 
