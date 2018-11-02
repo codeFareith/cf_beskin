@@ -33,7 +33,7 @@ Note: if you have made changes to the stylesheet, it may be necessary to clear t
 
 ### Kurt Kunig // kupix web-design
 
-Special thanks goes to Kurt Kunig, who recently worked on adjusting the code of this extension so that it now runs under the new TYPO3 v9 LTS.
+Special thanks goes to Kurt Kunig, who recently worked on adjusting the code of this extension so that it is now compatible with the new TYPO3 v9 LTS.
 
 <small>Twitter: [@kupix](https://www.twitter.com/@kupix)</small>
 
