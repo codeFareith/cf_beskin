@@ -4,7 +4,7 @@
   "description": "Define your own css rule-sets for the TYPO3 CMS backend.",
   "homepage": "https://www.fareith.de",
   "license": [
-    "GPL-2.0+"
+    "GPL-3.0-or-later"
   ],
   "keywords": [
     "TYPO3",
@@ -26,7 +26,8 @@
 
   "require": {
     "typo3/cms-core": "^7.6.0 || ^8.7.0 || ^9.5.0",
-    "typo3/cms-felogin": "^7.6.0 || ^8.7.0 || ^9.5.0"
+    "typo3/cms-felogin": "^7.6.0 || ^8.7.0 || ^9.5.0",
+    "ext-json": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
@@ -47,7 +48,7 @@
   },
 
   "replace": {
-    "cf_beskin": "self.version",
+    "codefareith/cf_beskin": "self.version",
     "typo3-ter/cf-beskin": "self.version"
   },
 

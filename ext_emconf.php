@@ -10,7 +10,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => '',
 
     'state' => 'stable',
-    'version' => '1.2.0',
+    'version' => '1.2.1',
 
     'uploadFolders' => false,
     'createDirs' => '',
@@ -22,10 +22,14 @@ $EM_CONF[$_EXTKEY] = [
             'typo3' => '7.6.0-9.9.99',
         ],
         'conflicts' => [
-
         ],
         'suggests' => [
+        ],
+    ],
 
+    'autoload' => [
+        'psr-4' => [
+            'CodeFareith\\CfBeskin\\' => 'Classes',
         ],
     ],
 ];

@@ -3,4 +3,5 @@
 /* pagespeed_module bugfix */
 script {
     display: none !important;
+    color: #000;
 }
